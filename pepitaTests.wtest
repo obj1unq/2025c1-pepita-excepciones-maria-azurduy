@@ -1,15 +1,20 @@
 import pepita.*
 
-describe "Pepita, Pepon y Roque"{
-
-    test "La energia inicial de Pepon es 30"{
-
-        assert.fail("IMPLEMENTAR EL TEST!")
+describe "Pepita" {
+    test "Cuando come alpiste, su energia pasa de 100 a 120" {
+        pepita.comer(alpiste)
+        assert.equals(120, pepita.energia())
     }
+}
 
-    test "Pepon al comer alpiste queda con energia en 40"{
 
-        assert.fail("IMPLEMENTAR EL TEST!")
+
+
+
+
+describe "Pepita no puede volar" {
+    test "Cuando la energia es menor, no puede volar" {
+        pepita.energia()
+        assert.throwsException({ pepita.validarVolar(150) })
     }
-
 }
